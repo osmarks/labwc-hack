@@ -26,6 +26,7 @@ labwc_sources = files(
   'workspaces.c',
   'xdg.c',
   'xdg-popup.c',
+  'ipc-server.c'
 )
 
 if have_xwayland

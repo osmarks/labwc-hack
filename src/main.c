@@ -11,6 +11,7 @@
 #include "config/session.h"
 #include "labwc.h"
 #include "theme.h"
+#include "ipc-server.h"
 #include "menu/menu.h"
 
 struct rcxml rc = { 0 };
@@ -170,6 +171,8 @@ main(int argc, char *argv[])
 	server.theme = &theme;
 
 	menu_init(&server);
+
+	ipc_init(&server);
 
 	session_autostart_init(rc.config_dir);
 	if (startup_cmd) {

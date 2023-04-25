@@ -56,6 +56,7 @@ wlroots = dependency(
 
 wlroots_has_xwayland = wlroots.get_variable('have_xwayland') == 'true'
 
+jsonc = dependency('json-c', version: '>=0.13')
 wayland_server = dependency('wayland-server', version: '>=1.19.0')
 wayland_protos = dependency('wayland-protocols')
 xkbcommon = dependency('xkbcommon')
@@ -103,6 +104,7 @@ labwc_deps = [
   pangocairo,
   input,
   math,
+  jsonc
 ]
 
 subdir('include')
